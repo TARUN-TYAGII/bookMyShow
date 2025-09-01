@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 
@@ -60,6 +62,12 @@ public class UserController {
             return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>("User deleted successfully", HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUserById(@PathVariable Long id, @RequestBody User req) {
+       User user = userService.updateUserById(id, req);
+       return new ResponseEntity<>(user, HttpStatus.OK);
     }
     
     

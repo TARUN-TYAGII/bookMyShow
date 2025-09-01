@@ -40,4 +40,16 @@ public class UserRepository {
         users.remove(user);
         return user;
     }
+
+    public User updateUserById(Long id, User req) {
+        User  user = users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
+        if(user == null){
+            return null;
+        }
+        user.setName(req.getName());
+        user.setEmail(req.getEmail());
+        user.setPhoneNumber(req.getPhoneNumber());
+        user.setUpdatedAt(new Date());
+        return user;
+    }
 }

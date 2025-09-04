@@ -1,5 +1,21 @@
 package com.example.demo.models;
 
-public class Screen {
+import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
+@SuperBuilder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Screen {
+    private String name;
+    private List<Seat> seats;
+    private List<Show> shows;
+    private Theatre theatre;
 }

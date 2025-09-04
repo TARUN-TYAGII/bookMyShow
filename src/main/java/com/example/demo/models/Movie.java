@@ -1,5 +1,7 @@
 package com.example.demo.models;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,4 +18,5 @@ public class Movie extends BaseModel {
     private String genre;
     private String duration;
     private String language;
+    private List<Show> shows;
 }

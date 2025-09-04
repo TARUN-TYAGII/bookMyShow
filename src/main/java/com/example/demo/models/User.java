@@ -1,6 +1,8 @@
 package com.example.demo.models;
 
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,4 +18,5 @@ public class User extends BaseModel {
     private String name;
     private String email;
     private String phoneNumber;
+    private List<Booking> bookings;
 }

@@ -15,7 +15,7 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Show {
+public class Show extends BaseModel {
 
     private Movie movie;
     private Screen screen;

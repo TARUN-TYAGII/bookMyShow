@@ -22,7 +22,7 @@ public class SeatRepository {
         seats.add(seat);
         return seat;
     }
-
+    
     public List<Seat> getSeatsByScreenId(Long screenId) {
         return seats.stream().filter(s-> s.getScreen().getId().equals(screenId)).collect(Collectors.toList());
     }

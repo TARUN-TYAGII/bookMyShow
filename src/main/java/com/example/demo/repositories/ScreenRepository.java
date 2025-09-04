@@ -3,6 +3,7 @@ package com.example.demo.repositories;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Repository;
@@ -20,6 +21,11 @@ public class ScreenRepository {
         screen.setUpdatedAt(new Date());
         screens.add(screen);
         return screen;
+    }
+
+    public Optional<Screen> findScreenById(Long screenId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findScreenById'");
     }
 
 }

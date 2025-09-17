@@ -28,13 +28,13 @@ public class ShowController {
         return new ResponseEntity<>(newShow, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{screenId}")
+    @GetMapping("/screen/{screenId}")
     public ResponseEntity<Show> getShowByScreenId(@PathVariable Long screenId){
         Show show = showService.getShowByScreenId(screenId);
         return new ResponseEntity<>(show, HttpStatus.OK);
     }
 
-    @GetMapping("/{movieId}")
+    @GetMapping("/movie/{movieId}")
     public ResponseEntity<Show> getShowByMovieId(@PathVariable Long movieId){
         Show show = showService.getShowByMovieId(movieId);
         return new ResponseEntity<>(show, HttpStatus.OK);

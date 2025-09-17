@@ -31,4 +31,11 @@ public class ShowRepository {
         return shows.stream().filter(s -> s.getMovie().getId().equals(movieId)).findFirst().orElse(null);
     }
 
+    public Show getShowById(Long id) {
+        return shows.stream().filter(s -> s.getId().equals(id)).findFirst().orElse(null);
+    }
+
+    public List<Show> getAllShows() {
+        return new ArrayList<>(shows);
+    }
 }

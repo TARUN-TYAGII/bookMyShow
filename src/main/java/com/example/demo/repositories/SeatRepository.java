@@ -26,4 +26,12 @@ public class SeatRepository {
     public List<Seat> getSeatsByScreenId(Long screenId) {
         return seats.stream().filter(s-> s.getScreen().getId().equals(screenId)).collect(Collectors.toList());
     }
+
+    public Seat getSeatById(Long id) {
+        return seats.stream().filter(s -> s.getId().equals(id)).findFirst().orElse(null);
+    }
+
+    public List<Seat> getAllSeats() {
+        return new ArrayList<>(seats);
+    }
 }

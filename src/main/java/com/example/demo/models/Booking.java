@@ -19,5 +19,4 @@ public class Booking extends BaseModel {
     private Show show;
     private List<Seat> seats;
     private Payment payment;
-
 }

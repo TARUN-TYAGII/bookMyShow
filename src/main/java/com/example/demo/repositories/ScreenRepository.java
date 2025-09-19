@@ -24,8 +24,8 @@ public class ScreenRepository {
     }
 
     public Optional<Screen> findScreenById(Long screenId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findScreenById'");
+       Optional<Screen> screen = screens.stream().filter(s -> s.getId().equals(screenId)).findFirst();
+       return screen;
     }
 
 }

@@ -27,7 +27,6 @@ public class UserRepository {
 
     public User getUserById(Long id){
         User user = users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
-        System.out.println("User from repo: " + user);
         return user;
     }
 

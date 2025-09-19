@@ -12,7 +12,7 @@ import com.example.demo.models.Screen;
 import com.example.demo.services.ScreenService;
 
 @RestController
-@RequestMapping("api/v1/screen")
+@RequestMapping("/api/v1/screen")
 public class ScreenController {
     private final ScreenService screenService;
 
@@ -20,7 +20,7 @@ public class ScreenController {
         this.screenService = screenService;
     }
 
-    @PostMapping
+    @PostMapping("/{theatreId}")
     public ResponseEntity<Screen> createScreen(@PathVariable Long theatreId, @RequestBody Screen screen){
         Screen newScreen = screenService.createScreen(theatreId, screen);
         return new ResponseEntity<>(newScreen, HttpStatus.CREATED);
